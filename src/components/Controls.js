@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
 const Controls = props => {
@@ -9,6 +10,12 @@ const Controls = props => {
       <Button click={props.resetAction}>Reset</Button>
     </div>
   );
+};
+
+Controls.propTypes = {
+  startAction: PropTypes.func.isRequired,
+  stopAction: PropTypes.func.isRequired,
+  resetAction: PropTypes.func.isRequired,
 };
 
 export default Controls;
